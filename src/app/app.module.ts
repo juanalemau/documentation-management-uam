@@ -16,6 +16,17 @@ import { ContentLayoutComponent } from './layout/content-layout/content-layout.c
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { 
+  NbThemeModule, 
+  NbLayoutModule, 
+  NbTabsetModule, 
+  NbCardModule, 
+  NbRouteTabsetModule,
+  NbButtonModule,
+  NbInputModule
+} from '@nebular/theme';
+
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 @NgModule({ 
   declarations: [
@@ -30,7 +41,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    NbThemeModule.forRoot(),
+    NbLayoutModule,
+    NbEvaIconsModule,
+    NbTabsetModule,
+    NbCardModule,
+    NbRouteTabsetModule,
+    NbButtonModule,
+    NbInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

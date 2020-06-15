@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AuthLayoutComponent{
 
+  tabs: any[] = [
+    {
+      title: 'Login',
+      responsive: true,
+      route: '/auth/login',
+    },
+    {
+      title: 'Inscrição',
+      responsive: true,
+      route: '/auth/register',
+    }
+  ];
+
 }

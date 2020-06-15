@@ -1,23 +1,29 @@
-<form>
-  <div class="form-group">
-    <label class="d-block">
-      <input type="text" class="form-control" [placeholder]="'Firstname'">
-    </label>
+<div class="content">
+  <div class="form-register">
+    <form>
+      <div class="form-group">
+        <label for="inputEmail">Email</label>
+        <label class="d-block">
+          <input nbInput type="text" class="form-control" placeholder="exemplo@domain.com">
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail">Telefone</label>
+        <label class="d-block">
+          <input nbInput type="text" class="form-control" placeholder="+55(11)999999999">
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail">Senha</label>
+        <label class="d-block">
+          <input nbInput type="text" class="form-control" placeholder="*******">
+        </label>
+      </div>
+      <div class="form-group">
+        <button nbButton status="info" type="submit">Registo</button>
+      </div>
+      <!-- <a [routerLink]="['/auth/login']">Got an account already? Log in here!</a> -->
+    </form>
   </div>
-  <div class="form-group">
-    <label class="d-block">
-      <input type="text" class="form-control" [placeholder]="'Cellphone'">
-    </label>
-  </div>
-  <div class="form-group">
-    <label class="d-block">
-      <input type="text" class="form-control" [placeholder]="'Password'">
-    </label>
-  </div>
-  <div class="form-group">
-    <button class="btn btn-primary btn-block btn-raised" type="submit">
-      <span>Sign Up</span>
-    </button>
-  </div>
-  <a [routerLink]="['/auth/login']">Got an account already? Log in here!</a>
-</form>
+</div>
+

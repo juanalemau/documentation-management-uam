@@ -1,10 +1,20 @@
-<div class="container-fluid full-width-image">
-  <div class="auth-container">
-    <div class="auth-box">
-      <div class="container">
-        <div class="card col-md-6 mt-3 mx-auto">
-          <div class="card-body">
-            <router-outlet></router-outlet>
+<div class="container-fluid">
+  <div class="row no-gutter">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6" style="background: #F6F8FC;">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <div style="font-weight: bold;color: #212353;font-size: 20px;margin-bottom: 30px;">
+                Bem-vindo ao GESPE
+              </div>
+              <nb-card>
+                <nb-card-body>
+                  <nb-route-tabset [tabs]="tabs" fullWidth></nb-route-tabset>
+                </nb-card-body>
+              </nb-card>
+            </div>
           </div>
         </div>
       </div>

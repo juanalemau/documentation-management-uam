@@ -1,3 +1,7 @@
 .mat-app-background {
   height: 100%;
 }
+
+::ng-deep nb-sidebar .main-container-fixed{
+  top: 0 !important;
+}

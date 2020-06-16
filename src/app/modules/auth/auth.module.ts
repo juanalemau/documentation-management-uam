@@ -6,7 +6,7 @@ import { SharedModule } from '../../shared/shared.module';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthRoutingModule } from './auth.routing';
-import { NbButtonModule, NbInputModule} from '@nebular/theme';
+import { NbButtonModule, NbInputModule, NbSidebarModule} from '@nebular/theme';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { NbButtonModule, NbInputModule} from '@nebular/theme';
     ReactiveFormsModule, 
     SharedModule,
     NbButtonModule,
-    NbInputModule
+    NbInputModule,
+    NbSidebarModule
   ]
 })
 export class AuthModule { }

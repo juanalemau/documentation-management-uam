@@ -1,0 +1,346 @@
+<div class="container documentation-container">
+  <div class="title">
+    Documentation
+  </div>
+  <div>
+    <nb-card>
+      <nb-card-body>
+        <nb-stepper orientation="vertical">
+          <nb-step label="Tipo de documentação">
+            <div class="content-step">
+              <div class="title">Tipo de documentação</div>
+              <div class="description">
+                As próximas categorias a serem exibidas são os tipos de documentação que podem ser
+                gerenciado no site.
+              </div>
+              <div class="content-type-document">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <div>
+                      <nb-card style="background: #015EFF;">
+                        <nb-card-body>
+                          <div class="content-card-document">
+                            <div class="title" style="color: white">
+                              CPF
+                            </div>
+                            <div class="option">
+                              <button nbButton ghost style="color: white" status="primary"><nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                            </div>
+                          </div>
+                        </nb-card-body>
+                      </nb-card>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <nb-card>
+                      <nb-card-body>
+                        <div class="content-card-document">
+                          <div class="title">
+                            B.U
+                          </div>
+                          <div class="option">
+                            <button nbButton ghost status="primary"><nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                          </div>
+                        </div>
+                      </nb-card-body>
+                    </nb-card>
+                  </div>
+                  <div class="col-sm-3">
+                    <nb-card>
+                      <nb-card-body>
+                        <div class="content-card-document">
+                          <div class="title">
+                            RNE
+                          </div>
+                          <div class="option">
+                            <button nbButton ghost status="primary"><nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                          </div>
+                        </div>
+                      </nb-card-body>
+                    </nb-card>
+                  </div>
+                  <div class="col-sm-3">
+                    <nb-card>
+                      <nb-card-body>
+                        <div class="content-card-document">
+                          <div class="title">
+                            C.T
+                          </div>
+                          <div class="option">
+                            <button nbButton ghost status="primary"><nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                          </div>
+                        </div>
+                      </nb-card-body>
+                    </nb-card>
+                  </div>
+                </div>
+                <div>
+                  <nb-card style="border: 1px solid #015EFF;background: #F2F7FF;">
+                    <nb-card-body>
+                      <div class="content-description">
+                        O Registro Nacional de Estabelecimento (RNE) é o número de identificação que concede à Autoridade Sanitária Jurídica (ASJ) competente para qualquer pessoa física ou jurídica, empresa comercial, estabelecimento da fábrica de alimentos que deseja comercializar seus produtos a partir do ejido municipal.
+                      </div>
+                    </nb-card-body>
+                  </nb-card>
+                </div>
+                <div>
+                  <button nbButton status="basic" appearance="ghost">cancelar</button>
+                  <button nbButton status="primary">Segue<nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                </div>
+              </div>
+            </div>
+          </nb-step>
+          <nb-step label="Dados do usuário">
+            <div class="content-step">
+              <div class="title">Dados do usuário</div>
+              <div class="description">
+                Como o procedimento é para uma pessoa específica, é essencial fornecer esses dados básicos.
+              </div>
+              <div class="content-type-document">
+                <form>
+                  <div style="font-size: 18px;font-weight: bold;margin-bottom: 10px;">1. Pessoal</div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">Nome usuário (*)</label>
+                        <label class="d-block">
+                          <input nbInput type="text" class="form-control" placeholder="Nome">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">Gênero (*)</label>
+                        <label class="d-block">
+                          <nb-select placeholder="Gênero">
+                            <nb-option value="1">Fêmea</nb-option>
+                            <nb-option value="2">Masculino</nb-option>
+                          </nb-select>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">Data de nascimento (*)</label>
+                        <label class="d-block">
+                          <input nbInput placeholder="Data de nascimento" [nbDatepicker]="formpicker">
+                          <nb-datepicker #formpicker></nb-datepicker>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">Email (*)</label>
+                        <label class="d-block">
+                          <input nbInput type="text" class="form-control" placeholder="examplo@domain.com">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">Celular (*)</label>
+                        <label class="d-block">
+                          <input nbInput type="text" class="form-control" placeholder="+55(11)99999999">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">Nome da mãe (*)</label>
+                        <label class="d-block">
+                          <input nbInput type="text" class="form-control" placeholder="Nome da mãe">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="font-size: 18px;font-weight: bold;margin-bottom: 10px;">1. Address</div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">Número (*)</label>
+                        <label class="d-block">
+                          <input nbInput type="text" class="form-control" placeholder="Número">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">Complemento (*)</label>
+                        <label class="d-block">
+                          <input nbInput type="text" class="form-control" placeholder="Complemento">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">Cidade (*)</label>
+                        <label class="d-block">
+                          <input nbInput type="text" class="form-control" placeholder="Cidade">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                    </div>
+                  </div>
+                  <div style="font-size: 18px;font-weight: bold;margin-bottom: 10px;">1. Complementar</div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">Data de partida (*)</label>
+                        <label class="d-block">
+                          <input nbInput placeholder="Data de partida" [nbDatepicker]="formpicker">
+                          <nb-datepicker #formpicker></nb-datepicker>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">Motivo de Preenchimento (*)</label>
+                        <label class="d-block">
+                          <nb-select placeholder="Motivo">
+                            <nb-option value="1">Fêmea</nb-option>
+                            <nb-option value="2">Masculino</nb-option>
+                          </nb-select>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="margin-top:10px">
+                    <button nbButton status="basic" appearance="ghost">cancelar</button>
+                    <button nbButton status="primary">Segue<nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nb-step>
+          <nb-step label="Data e hora da entrega">
+            <div class="content-step">
+              <div class="title">Data e hora de entrega</div>
+              <div class="description">
+                Horário de expedição para enviar os documentos para o seu endereço.
+              </div>
+              <div class="content-type-document">
+                <form>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">Data de entrega (*)</label>
+                        <label class="d-block">
+                          <input nbInput placeholder="Data de entrega" [nbDatepicker]="formpicker">
+                          <nb-datepicker #formpicker></nb-datepicker>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">Gênero (*)</label>
+                        <label class="d-block">
+                          <nb-select placeholder="Gênero">
+                            <nb-option value="1">10:00 AM - 12:00 AM</nb-option>
+                            <nb-option value="2">10:00 AM - 11:00 AM</nb-option>
+                          </nb-select>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="margin-top:10px">
+                    <button nbButton status="basic" appearance="ghost">cancelar</button>
+                    <button nbButton status="primary">Segue<nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nb-step>
+          <nb-step label="Pagar o serviço">
+            <div class="content-step">
+              <div class="title">Pagar o serviço</div>
+              <div class="description">
+                O tipo de pagamento pode ser feito com os diferentes tipos de pagamento que temos disponíveis (no momento, estamos cobrando apenas com cartão Visa).
+              </div>
+              <div class="content-type-document">
+                <form>
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <div class="form-group">
+                        <label for="inputEmail">Número do Cartão de Crédito (*)</label>
+                        <label class="d-block">
+                          <input nbInput type="text" class="form-control" placeholder="**** **** **** **** 2323">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div style="width: 100%;height: auto;">
+                        <img style="height: 70px;" src="../../../../../assets/img/visa.png">
+                      </div>
+                    </div>
+                  </div>
+                  <label for="inputEmail">Expiração</label>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <nb-select placeholder="Data">
+                          <nb-option value="1">Janeiro</nb-option>
+                          <nb-option value="2">Fevereiro</nb-option>
+                          <nb-option value="3">Março</nb-option>
+                          <nb-option value="4">Abril</nb-option>
+                          <nb-option value="5">Maio</nb-option>
+                          <nb-option value="6">Junho</nb-option>
+                          <nb-option value="7">Julho</nb-option>
+                          <nb-option value="8">Agosto</nb-option>
+                          <nb-option value="9">Setembro</nb-option>
+                          <nb-option value="10">Outubro</nb-option>
+                          <nb-option value="11">Novembro</nb-option>
+                          <nb-option value="12">Dezembro</nb-option>
+                        </nb-select>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <nb-select placeholder="Ano">
+                          <nb-option value="1">2020</nb-option>
+                          <nb-option value="2">2019</nb-option>
+                          <nb-option value="3">2018</nb-option>
+                          <nb-option value="4">2017</nb-option>
+                          <nb-option value="5">2016</nb-option>
+                          <nb-option value="6">2015</nb-option>
+                          <nb-option value="7">2014</nb-option>
+                          <nb-option value="8">2013</nb-option>
+                          <nb-option value="9">2012</nb-option>
+                          <nb-option value="10">2011</nb-option>
+                          <nb-option value="11">2010</nb-option>
+                          <nb-option value="12">2009</nb-option>
+                        </nb-select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputEmail">CVC/CVV (*) </label>
+                        <label class="d-block">
+                          <input nbInput type="text" class="form-control" placeholder="2323">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                    </div>
+                  </div>
+                  <div style="margin-top:10px">
+                    <button nbButton status="basic" appearance="ghost">Cancelar</button>
+                    <button nbButton status="primary">Finalizar<nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nb-step>
+        </nb-stepper>
+      </nb-card-body>
+    </nb-card>
+  </div> 
+</div>

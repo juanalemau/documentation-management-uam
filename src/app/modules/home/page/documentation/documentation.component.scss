@@ -1,0 +1,36 @@
+.documentation-container {
+  .title {
+    color: #212353;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .content-step {
+    .title {
+
+    }
+
+    .description {
+
+    }
+
+    .content-type-document {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      .content-card-document {
+        text-align: center;
+        .title {
+        }
+        .option {
+
+        }
+      }
+    }
+  }
+
+  ::ng-deep .step-content {
+    padding: 0 !important; 
+  }
+}

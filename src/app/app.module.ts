@@ -16,6 +16,9 @@ import { ContentLayoutComponent } from './layout/content-layout/content-layout.c
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { NavComponent } from './layout/nav/nav.component';
+
 import { 
   NbThemeModule, 
   NbLayoutModule, 
@@ -23,7 +26,12 @@ import {
   NbCardModule, 
   NbRouteTabsetModule,
   NbButtonModule,
-  NbInputModule
+  NbInputModule,
+  NbSidebarModule,
+  NbMenuModule,
+  NbUserModule,
+  NbDialogModule,
+  NbDatepickerModule
 } from '@nebular/theme';
 
 import { NbEvaIconsModule } from '@nebular/eva-icons';
@@ -32,7 +40,8 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
   declarations: [
     AppComponent,
     AuthLayoutComponent,
-    ContentLayoutComponent
+    ContentLayoutComponent,
+    NavComponent
   ],
   imports: [
     CoreModule,
@@ -49,7 +58,12 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbCardModule,
     NbRouteTabsetModule,
     NbButtonModule,
-    NbInputModule
+    NbInputModule,
+    NbSidebarModule.forRoot(),
+    NbMenuModule.forRoot(),
+    NbUserModule,
+    NbDialogModule.forRoot(),
+    NbDatepickerModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

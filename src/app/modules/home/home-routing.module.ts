@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './page/home.component';
+import { StatusComponent } from './page/status/status.component';
+import { DocumentationComponent } from './page/documentation/documentation.component';
+import { ProfileComponent } from './page/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -10,9 +12,22 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'status',
-    component: HomeComponent
-  },
+    path: '',
+    children: [
+      {
+        path: 'status',
+        component: StatusComponent
+      },
+      {
+        path: 'documentation',
+        component: DocumentationComponent
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({

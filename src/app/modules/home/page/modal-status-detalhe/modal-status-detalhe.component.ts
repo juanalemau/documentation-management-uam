@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NbDialogRef  } from '@nebular/theme';
 
 @Component({
   selector: 'modal-status-detalhe',
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./modal-status-detalhe.component.scss']
 })
 export class ModalStatusDetalheComponent {
+
+  constructor(protected ref: NbDialogRef<ModalStatusDetalheComponent>) {
+  }
+
+  close(){
+    this.ref.close();
+  }
 }

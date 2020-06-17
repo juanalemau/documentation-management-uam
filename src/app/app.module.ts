@@ -31,7 +31,7 @@ import {
   NbMenuModule,
   NbUserModule,
   NbDialogModule,
-  NbDatepickerModule
+  NbDatepickerModule,
 } from '@nebular/theme';
 
 import { NbEvaIconsModule } from '@nebular/eva-icons';
@@ -64,6 +64,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbUserModule,
     NbDialogModule.forRoot(),
     NbDatepickerModule.forRoot(),
+    NbDialogModule.forChild()
   ],
   providers: [],
   bootstrap: [AppComponent]

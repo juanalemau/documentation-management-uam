@@ -1,1 +1,103 @@
-<p>Open Modal Detalhe</p>
+<nb-card style="width: 800px;background: #F6FAFD;">
+  <nb-card-body>
+    <div class="row">
+      <div class="col-sm-6" style="color: #363553;font-weight: bold;font-size: 18px;">Detalhe de compra: #3022</div> 
+      <div class="col-sm-6" style="text-align: right;">
+        Jun 09, 2020
+      </div>
+    </div>
+    <div class="row" style="margin-top: 10px;">
+      <div class="col-sm-6">
+        <nb-card>
+          <nb-card-body>
+            <div>
+              <div style="margin-bottom: 20px;font-weight: bold;">Status</div>
+              <nb-stepper orientation="vertical">
+                <nb-step label="Envio de documentos" completed="true">
+                </nb-step>
+                <nb-step label="Expedição e registro na entidade pública" completed="true">
+                </nb-step>
+                <nb-step label="Agendamento">
+                </nb-step>
+                <nb-step label="Retirada de documentos">
+                </nb-step>
+                <nb-step label="Entrega de documentos em casa">
+                </nb-step>
+                <nb-step label="Finalizado">
+                </nb-step>
+              </nb-stepper>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+      <div class="col-sm-6">
+        <nb-card>
+          <nb-card-body>
+            <div style="margin-top: 10px;margin-bottom: 10px;">
+              <div style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">Resumo da compra</div>
+              <div class="row" style="margin-bottom: 20px;">
+                <div class="col-sm-6">
+                  CPF
+                </div>
+                <div class="col-sm-6">
+                  R$ 100,00
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6" style="font-weight: bold;">
+                  Cupom de desconto:
+                </div>
+                <div class="col-sm-6">
+                  - R$ 50.00
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6" style="font-weight: bold;">
+                  Taxa de entrega:
+                </div>
+                <div class="col-sm-6">
+                  + R$ 20.00
+                </div>
+              </div>
+              <div class="row" style="margin-top: 10px;border-top: 1px solid #363553;">
+                <div class="col-sm-6" style="font-weight: bold;">
+                  Total:
+                </div>
+                <div class="col-sm-6">
+                  + R$ 70.00
+                </div>
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+        <nb-card>
+          <nb-card-body>
+            <div style="margin-top: 10px;margin-bottom: 10px;">
+              <div style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">Dados do usuário</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                Local de entrega:
+              </div>
+              <div class="col-sm-6">
+                Rua Duque de Caixas 123, Centro Barra Mansa - 273445010
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                Nome de usuário::
+              </div>
+              <div class="col-sm-6">
+                Juan Alejandro Mauricio Aguirre
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+    
+  </nb-card-body>
+  <nb-card-footer>
+    <button nbButton (click)="close()">Fechar</button>
+  </nb-card-footer>
+</nb-card>

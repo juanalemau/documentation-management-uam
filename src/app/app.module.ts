@@ -19,6 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { NavComponent } from './layout/nav/nav.component';
 
+import { HttpClientModule }    from '@angular/common/http';
+
 import { 
   NbThemeModule, 
   NbLayoutModule, 
@@ -64,7 +66,8 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbUserModule,
     NbDialogModule.forRoot(),
     NbDatepickerModule.forRoot(),
-    NbDialogModule.forChild()
+    NbDialogModule.forChild(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,28 +1,30 @@
 <div class="content">
   <div class="form-register">
-    <form>
+    <form (ngSubmit)="register()" [formGroup]="registerForm">
       <div class="form-group">
         <label for="inputEmail">Email</label>
         <label class="d-block">
-          <input nbInput type="text" class="form-control" placeholder="exemplo@domain.com">
+          <input nbInput type="text" class="form-control" placeholder="exemplo@domain.com" formControlName="email">
+          <app-control-messages [control]="f['email']"></app-control-messages>
         </label>
       </div>
       <div class="form-group">
         <label for="inputEmail">Telefone</label>
         <label class="d-block">
-          <input nbInput type="text" class="form-control" placeholder="+55(11)999999999">
+          <input nbInput type="text" class="form-control" placeholder="+55(11)999999999"  formControlName="cellphone">
+          <app-control-messages [control]="f['cellphone']"></app-control-messages>
         </label>
       </div>
       <div class="form-group">
         <label for="inputEmail">Senha</label>
         <label class="d-block">
-          <input nbInput type="text" class="form-control" placeholder="*******">
+          <input nbInput type="password" class="form-control" placeholder="*******" formControlName="password">
+          <app-control-messages [control]="f['password']"></app-control-messages>
         </label>
       </div>
       <div class="form-group">
         <button nbButton status="info" type="submit">Registo</button>
       </div>
-      <!-- <a [routerLink]="['/auth/login']">Got an account already? Log in here!</a> -->
     </form>
   </div>
 </div>

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
-import { NoAuthGuard } from '../app/core/guard/no-auth.guard';
+import { AuthGuard } from './core/interceptor/auth.guard'
 
 const routes: Routes = [
   {
@@ -19,7 +19,7 @@ const routes: Routes = [
   {
     path: '',
     component: ContentLayoutComponent,
-    canActivate: [NoAuthGuard],
+    canActivate: [AuthGuard],
     children: [
       {
         path: 'dashboard',

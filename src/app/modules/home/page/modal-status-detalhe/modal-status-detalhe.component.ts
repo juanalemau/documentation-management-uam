@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NbDialogRef  } from '@nebular/theme';
 
 @Component({
@@ -6,9 +6,16 @@ import { NbDialogRef  } from '@nebular/theme';
   templateUrl: './modal-status-detalhe.component.html',
   styleUrls: ['./modal-status-detalhe.component.scss']
 })
-export class ModalStatusDetalheComponent {
+export class ModalStatusDetalheComponent implements OnInit {
 
-  constructor(protected ref: NbDialogRef<ModalStatusDetalheComponent>) {
+  @Input() data: any;
+
+  constructor(
+    protected ref: NbDialogRef<ModalStatusDetalheComponent>) {
+  }
+
+  ngOnInit(){
+    console.log(this.data);
   }
 
   close(){

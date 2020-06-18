@@ -1,9 +1,9 @@
 <nb-card style="width: 800px;background: #F6FAFD;">
   <nb-card-body>
     <div class="row">
-      <div class="col-sm-6" style="color: #363553;font-weight: bold;font-size: 18px;">Detalhe de compra: #3022</div> 
+      <div class="col-sm-6" style="color: #363553;font-weight: bold;font-size: 18px;">Detalhe de compra: #{{data.number_order}}</div> 
       <div class="col-sm-6" style="text-align: right;">
-        Jun 09, 2020
+        {{data.data}}
       </div>
     </div>
     <div class="row" style="margin-top: 10px;">
@@ -37,10 +37,10 @@
               <div style="margin-top: 10px;margin-bottom: 10px;font-weight: bold;">Resumo da compra</div>
               <div class="row" style="margin-bottom: 20px;">
                 <div class="col-sm-6">
-                  CPF
+                  {{data.name_operation}}
                 </div>
                 <div class="col-sm-6">
-                  R$ 100,00
+                  R$ {{data.amount_total}}
                 </div>
               </div>
               <div class="row">
@@ -48,7 +48,7 @@
                   Cupom de desconto:
                 </div>
                 <div class="col-sm-6">
-                  - R$ 50.00
+                  - R$ {{data.discount}}
                 </div>
               </div>
               <div class="row">
@@ -56,7 +56,7 @@
                   Taxa de entrega:
                 </div>
                 <div class="col-sm-6">
-                  + R$ 20.00
+                  + R$ {{data.delivery_rate}}
                 </div>
               </div>
               <div class="row" style="margin-top: 10px;border-top: 1px solid #363553;">
@@ -64,7 +64,7 @@
                   Total:
                 </div>
                 <div class="col-sm-6">
-                  + R$ 70.00
+                  + R$ {{data.total_discounts}}
                 </div>
               </div>
             </div>
@@ -80,15 +80,15 @@
                 Local de entrega:
               </div>
               <div class="col-sm-6">
-                Rua Duque de Caixas 123, Centro Barra Mansa - 273445010
+                {{data.direction}}
               </div>
             </div>
             <div class="row">
               <div class="col-sm-6">
-                Nome de usuário::
+                Nome de usuário:
               </div>
               <div class="col-sm-6">
-                Juan Alejandro Mauricio Aguirre
+                {{data.name_user}}
               </div>
             </div>
           </nb-card-body>

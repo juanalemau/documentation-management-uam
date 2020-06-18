@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NbMenuItem } from '@nebular/theme';
+import { NbMenuItem, NbMenuService  } from '@nebular/theme';
 
 @Component({
   selector: 'app-nav',
@@ -30,9 +30,7 @@ export class NavComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private menuService: NbMenuService) {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

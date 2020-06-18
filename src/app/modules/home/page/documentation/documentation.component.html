@@ -5,7 +5,7 @@
   <div>
     <nb-card>
       <nb-card-body>
-        <nb-stepper orientation="vertical">
+        <nb-stepper orientation="vertical" disableStepNavigation>
           <nb-step label="Tipo de documentação">
             <div class="content-step">
               <div class="title">Tipo de documentação</div>
@@ -17,14 +17,14 @@
                 <div class="row">
                   <div class="col-sm-3">
                     <div>
-                      <nb-card style="background: #015EFF;">
+                      <nb-card [ngStyle]="active_card_cpf && {'background': '#015EFF'} || {'background': 'white'}">
                         <nb-card-body>
                           <div class="content-card-document">
-                            <div class="title" style="color: white">
+                            <div class="title" [ngStyle]="active_card_cpf && {'color': 'white'} || !active_card_cpf && {'color': '#212353'}">
                               CPF
                             </div>
                             <div class="option">
-                              <button nbButton ghost style="color: white" status="primary"><nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                              <button nbButton ghost  status="primary" (click)="cpfOpenDetail('cpf')" [ngStyle]="active_card_cpf && {'color': 'white'} || !active_card_cpf && {'color': '#015EFF'}"><nb-icon icon="arrow-forward-outline"></nb-icon></button>
                             </div>
                           </div>
                         </nb-card-body>
@@ -32,42 +32,42 @@
                     </div>
                   </div>
                   <div class="col-sm-3">
-                    <nb-card>
+                    <nb-card [ngStyle]="active_card_bu && {'background': '#015EFF'} || {'background': 'white'}">
                       <nb-card-body>
                         <div class="content-card-document">
-                          <div class="title">
+                          <div class="title" [ngStyle]="active_card_bu && {'color': 'white'} || !active_card_bu && {'color': '#212353'}">
                             B.U
                           </div>
                           <div class="option">
-                            <button nbButton ghost status="primary"><nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                            <button nbButton ghost status="primary" (click)="buOpenDetail('bu')" [ngStyle]="active_card_bu && {'color': 'white'} || !active_card_bu && {'color': '#015EFF'}"><nb-icon icon="arrow-forward-outline"></nb-icon></button>
                           </div>
                         </div>
                       </nb-card-body>
                     </nb-card>
                   </div>
                   <div class="col-sm-3">
-                    <nb-card>
+                    <nb-card [ngStyle]="active_card_rne && {'background': '#015EFF'} || {'background': 'white'}">
                       <nb-card-body>
                         <div class="content-card-document">
-                          <div class="title">
+                          <div class="title" [ngStyle]="active_card_rne && {'color': 'white'} || !active_card_rne && {'color': '#212353'}">
                             RNE
                           </div>
                           <div class="option">
-                            <button nbButton ghost status="primary"><nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                            <button nbButton ghost status="primary" (click)="rneOpenDetail('rne')" [ngStyle]="active_card_rne && {'color': 'white'} || !active_card_rne && {'color': '#015EFF'}"><nb-icon icon="arrow-forward-outline"></nb-icon></button>
                           </div>
                         </div>
                       </nb-card-body>
                     </nb-card>
                   </div>
                   <div class="col-sm-3">
-                    <nb-card>
+                    <nb-card [ngStyle]="active_card_ct && {'background': '#015EFF'} || {'background': 'white'}">
                       <nb-card-body>
                         <div class="content-card-document">
-                          <div class="title">
+                          <div class="title"  [ngStyle]="active_card_ct && {'color': 'white'} || !active_card_ct && {'color': '#212353'}">
                             C.T
                           </div>
                           <div class="option">
-                            <button nbButton ghost status="primary"><nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                            <button nbButton ghost status="primary" (click)="ctOpenDetail('ct')" [ngStyle]="active_card_ct && {'color': 'white'} || !active_card_ct && {'color': '#015EFF'}"><nb-icon icon="arrow-forward-outline"></nb-icon></button>
                           </div>
                         </div>
                       </nb-card-body>
@@ -75,17 +75,39 @@
                   </div>
                 </div>
                 <div>
-                  <nb-card style="border: 1px solid #015EFF;background: #F2F7FF;">
+                  <nb-card *ngIf="type_message == 'cpf'" style="border: 1px solid #015EFF;background: #F2F7FF;">
                     <nb-card-body>
                       <div class="content-description">
                         O Registro Nacional de Estabelecimento (RNE) é o número de identificação que concede à Autoridade Sanitária Jurídica (ASJ) competente para qualquer pessoa física ou jurídica, empresa comercial, estabelecimento da fábrica de alimentos que deseja comercializar seus produtos a partir do ejido municipal.
                       </div>
                     </nb-card-body>
                   </nb-card>
-                </div>
-                <div>
-                  <button nbButton status="basic" appearance="ghost">cancelar</button>
-                  <button nbButton status="primary">Segue<nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                  <nb-card  *ngIf="type_message == 'bu'" style="border: 1px solid #015EFF;background: #F2F7FF;">
+                    <nb-card-body>
+                      <div class="content-description">
+                        O Bilhete Único é um cartão inteligente que armazena créditos monetários e temporais eletrônicos para o pagamento de tarifas no Serviço Público de Transporte de Passageiros da Cidade de São Paulo, gerenciado pela SPTrans, e no Sistema Metropolitano Metropolitano de Transportes Públicos (Metrô e CPTM).
+                      </div>
+                    </nb-card-body>
+                  </nb-card>
+                  <nb-card  *ngIf="type_message == 'rne'"style="border: 1px solid #015EFF;background: #F2F7FF;">
+                    <nb-card-body>
+                      <div class="content-description">
+                        O Registro Nacional de Estabelecimento (RNE) é o número de identificação que concede à Autoridade Sanitária Jurídica (ASJ) competente para qualquer pessoa física ou jurídica, empresa comercial, estabelecimento da fábrica de alimentos que deseja comercializar seus produtos a partir do ejido municipal
+                      </div>
+                    </nb-card-body>
+                  </nb-card>
+                  <nb-card  *ngIf="type_message == 'ct'"style="border: 1px solid #015EFF;background: #F2F7FF;">
+                    <nb-card-body>
+                      <div class="content-description">
+                        O Cartão de Trabalho e Previdência Social (CTPS) é o documento que registra a vida profissional do trabalhador e garante o acesso aos direitos trabalhistas previstos em lei.
+                      </div>
+                    </nb-card-body>
+                  </nb-card>
+                  <div>
+                    <button nbButton status="basic" appearance="ghost" nbStepperPrevious>cancelar</button>
+                    <button nbButton status="primary" nbStepperNext>Segue<nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                    <!-- <button nbButton status="primary" nbStepperNext *ngIf="_active_button_documentation" >Segue<nb-icon icon="arrow-forward-outline"></nb-icon></button> -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -212,8 +234,8 @@
                     </div>
                   </div>
                   <div style="margin-top:10px">
-                    <button nbButton status="basic" appearance="ghost">cancelar</button>
-                    <button nbButton status="primary">Segue<nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                    <button nbButton status="basic" nbStepperPrevious appearance="ghost">cancelar</button>
+                    <button nbButton status="primary" nbStepperNext>Segue<nb-icon icon="arrow-forward-outline"></nb-icon></button>
                   </div>
                 </form>
               </div>
@@ -239,9 +261,9 @@
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label for="inputEmail">Gênero (*)</label>
+                        <label for="inputEmail">Tempo (*)</label>
                         <label class="d-block">
-                          <nb-select placeholder="Gênero">
+                          <nb-select placeholder="Tempo">
                             <nb-option value="1">10:00 AM - 12:00 AM</nb-option>
                             <nb-option value="2">10:00 AM - 11:00 AM</nb-option>
                           </nb-select>
@@ -250,8 +272,8 @@
                     </div>
                   </div>
                   <div style="margin-top:10px">
-                    <button nbButton status="basic" appearance="ghost">cancelar</button>
-                    <button nbButton status="primary">Segue<nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                    <button nbButton status="basic" appearance="ghost" nbStepperPrevious>cancelar</button>
+                    <button nbButton status="primary" nbStepperNext>Segue<nb-icon icon="arrow-forward-outline"></nb-icon></button>
                   </div>
                 </form>
               </div>
@@ -332,8 +354,8 @@
                     </div>
                   </div>
                   <div style="margin-top:10px">
-                    <button nbButton status="basic" appearance="ghost">Cancelar</button>
-                    <button nbButton status="primary">Finalizar<nb-icon icon="arrow-forward-outline"></nb-icon></button>
+                    <button nbButton status="basic" nbStepperPrevious appearance="ghost">Cancelar</button>
+                    <button nbButton status="primary" routerLink="/dashboard/status">Finalizar<nb-icon icon="arrow-forward-outline"></nb-icon></button>
                   </div>
                 </form>
               </div>
